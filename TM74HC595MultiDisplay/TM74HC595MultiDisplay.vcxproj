@@ -47,10 +47,10 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <ForcedIncludeFiles>%(ForcedIncludeFiles)</ForcedIncludeFiles>
-      <IgnoreStandardIncludePath>true</IgnoreStandardIncludePath>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\TM74HC595MultiDisplay;D:\Prototyping\Arduino-1.8.5\libraries;$(ProjectDir)..\..\..\..\Documents\Arduino\libraries;D:\Prototyping\Arduino-1.8.5\hardware\arduino\avr\libraries;D:\Prototyping\Arduino-1.8.5\hardware\arduino\avr\cores\arduino;D:\Prototyping\Arduino-1.8.5\hardware\arduino\avr\variants\standard;D:\Prototyping\Arduino-1.8.5\hardware\tools\avr\avr\include\;D:\Prototyping\Arduino-1.8.5\hardware\tools\avr\avr\include\avr\;D:\Prototyping\Arduino-1.8.5\hardware\tools\avr\lib\gcc\avr\4.8.1\include;D:\Prototyping\Arduino-1.8.5\hardware\tools\avr\lib\gcc\avr\4.9.2\include;D:\Prototyping\Arduino-1.8.5\hardware\tools\avr\lib\gcc\avr\4.9.3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ProjectDir)__vm\.TM74HC595MultiDisplay.vsarduino.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <IgnoreStandardIncludePath>false</IgnoreStandardIncludePath>
+      <PreprocessorDefinitions>__AVR_ATmega328p__;__AVR_ATmega328P__;F_CPU=16000000L;ARDUINO=10805;ARDUINO_AVR_UNO;ARDUINO_ARCH_AVR;__cplusplus=201103L;_VMICRO_INTELLISENSE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -81,7 +81,19 @@
       <FileType>CppCode</FileType>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="TM74HC595Multi.h" />
+    <ClInclude Include="__vm\.TM74HC595MultiDisplay.vsarduino.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="TM74HC595Multi.cpp" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties arduino.upload.port="COM5" />
+    </VisualStudio>
+  </ProjectExtensions>
 </Project>
